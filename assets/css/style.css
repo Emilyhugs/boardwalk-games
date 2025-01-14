@@ -6,25 +6,71 @@
 :root {
     --primary-font: 'Inter', sans-serif;
     --secondary-font: 'Macondo', cursive;
-    --primary-color: #3a2620; /*Dark brown*/
-    --secondary-color: #aa9581; /*Light brown*/
-    --highlight-color: #416a8e; /*Blue*/
-    --last-highlight-color: #7a9fc2; /*Light blue*/
+    --primary-color: #3a2620;
+    /*Dark brown*/
+    --secondary-color: #aa9581;
+    /*Light brown*/
+    --highlight-color: #416a8e;
+    /*Blue*/
+    --last-highlight-color: #7a9fc2;
+    /*Light blue*/
 
 }
 
 /*Global Styles*/
-body {font-family: var(--primary-font);}
-h1,h2,h3 {font-family: var(--secondary-font);color:var(--primary-color);text-transform: uppercase;}
-.sub-heading-color {color: var(--highlight-color);}
-.section {margin-top: 2rem;margin-bottom: 2rem;}
+body {
+    font-family: var(--primary-font);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+}
+
+h1,
+h2 {
+    text-transform: uppercase;
+}
+
+h2 {
+    margin-bottom: 2rem;
+}
+
+.sub-heading-color {
+    color: var(--highlight-color);
+}
+
+.section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
 /*Navbar*/
-#navbar {background-color: var(--primary-color);}
-#navbar .logo {width:30px;}
+#navbar {
+    background-color: var(--primary-color);
+}
+
+#navbar .logo {
+    width: 30px;
+}
 
 /*Header*/
-#header .lead {font-family: var(--secondary-font);}
+#header .lead {
+    font-family: var(--secondary-font);
+}
+
+/*Services*/
+#services .card-footer {
+    font-weight: bold;
+    color: var(--highlight-color);
+    background-color: transparent;
+}
+#services .card {
+    margin-bottom: 1.5rem;
+}
+
 
 /* grid visualisation CSS for testing 
 
@@ -37,3 +83,25 @@ h1,h2,h3 {font-family: var(--secondary-font);color:var(--primary-color);text-tra
     border: 2px solid white;
     background-color: lightgray; 
 }*/
+
+/*Media Queries*/
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    /*Make all service cards the same height for consistency*/
+    #services .card-body {min-height: 191px;}
+}
+/*Large devices (small laptops, 992px and up)*/
+@media (min-width: 992px) {
+    /*Make all service cards the same height for consistency*/
+    #services .card-body {min-height: auto;}
+}
+/*xl devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    /*Make all service cards the same height for consistency*/
+    #services .card-body {min-height: 220px;}
+}
+/*xxl devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+    /*Make all service cards the same height for consistency*/
+    #services .card-body {min-height: 195px;}
+}
